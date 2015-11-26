@@ -1,4 +1,12 @@
 if (Meteor.isClient) {
+    Meteor.startup(function(){
+        $(".logo").delay(1000);
+        $("#title_1").delay(2000);
+        $(".logo").fadeOut(1000);
+
+        $("#title_1").animate({fontSize:"2em"},1000);
+
+    });
     Template.body.helpers({
         tasks: function () {
             if (Session.get("hideCompleted")) {
@@ -28,7 +36,9 @@ if (Meteor.isClient) {
             // Insert a task into the collection
             Tasks.insert({
                 text: text,
-                createdAt: new Date() // current time
+                createdAt: new Date(), // current time
+                owner:Meteor.userId(),
+                username:Meteor.user().username
             });
 
             // Clear form

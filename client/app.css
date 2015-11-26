@@ -84,7 +84,24 @@ li {
     padding: 15px;
     border-bottom: #eee solid 1px;
 }
-
+.logo{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    right:0%;
+    bottom: 0%;
+    background-color: black;
+    opacity: 0.5;
+}
+.logo_img{
+    position:absolute;
+    width: 500px;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+}
+#title_1{
+    text-shadow: 3px 3px 3px #ccc;
+}
 li .text {
     margin-left: 10px;
 }

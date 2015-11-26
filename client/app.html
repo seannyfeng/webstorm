@@ -5,17 +5,18 @@
 <body>
 <div class="container">
     <header>
-        <h1>Todo List({{incompleteCount}})</h1>
-        <label class="hide-completed">
+        <h1 id="title_1">FlexCube Tech. Todo List({{incompleteCount}})</h1>
+        <p></p><label class="hide-completed">
             <input type="checkbox" checked="{{hideCompleted}}" />
             Hide Completed Tasks
         </label>
-        {{> loginButtons}}
-        {{#if currentUser}}
+    {{> loginButtons}}
+
+    {{#if currentUser}}
             <form class="new-task">
                 <input type="text" name="text" placeholder="Type to add new tasks" />
             </form>
-        {{/if}}
+    {{/if}}
     </header>
 
     <ul>
@@ -23,7 +24,12 @@
             {{> task}}
         {{/each}}
     </ul>
+
 </div>
+<div class="logo">
+    <img class="logo_img" src="res/logo.png">
+</div>
+
 </body>
 
 <template name="task">
